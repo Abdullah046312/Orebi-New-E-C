@@ -45,7 +45,7 @@ function SamplePrevArrow(props) {
 
 
 const NewArrivals = () => {
-    const data = useContext(ApiData);
+    const {info, loading} = useContext(ApiData);
     
     const settings = {
         autoplay: true,
@@ -70,17 +70,23 @@ const NewArrivals = () => {
         <section>
             <Container className="relative"> 
                 <h2 className='text-[#262626] font-bold text-[39px] font-DMs py-4'>New Arrivals</h2>
+
+                {loading ? 
+                <><h2 className='font-DMs font-bold text-[50px]'>Loading.....!</h2></>
+                :
              
              <Slider {...settings}>
-              {data.map((item)=>(
+              {info.map((item)=>(
 
                     <Link to="/shop">
                     <Arrivalscomponents item={item}/>
                     </Link>
+                    
 
               ))}
 
              </Slider>
+             }
 
                 
 

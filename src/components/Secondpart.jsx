@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import { Link } from 'react-router-dom';
 
 const Secondpart = () => {
   return (
@@ -16,9 +17,13 @@ const Secondpart = () => {
                 <h2 className='text-[30px] md:text-[40px] text-[#262626] font-DMs font-bold'>30%</h2>
                 <h4 className='text-[14px] md:text-[16px] text-[#6D6D6D] font-DMs font-normal'>sale for all items!</h4>
               </div>
+
+              <Link to="/shop">
               <button className='md:h-[50px] h-[40px] w-[100px] md:w-[185px] bg-black text-white text-[14px] md:text-[16px] font-DMs font-bold hover:bg-[#F39422] duration-300 ease-in-out'>
                 Shop Now
               </button>
+              
+              </Link>
             </div>
           </div>
 
@@ -31,9 +36,11 @@ const Secondpart = () => {
                 <h2 className='text-[30px] md:text-[40px] text-[#262626] font-DMs font-bold'>70%</h2>
                 <h4 className='text-[14px] md:text-[16px] text-[#6D6D6D] font-DMs font-normal'>sale for all items!</h4>
               </div>
+              <Link to= "/shop">
               <button className='md:h-[50px] h-[40px] w-[100px] md:w-[185px] bg-black text-white text-[14px] md:text-[16px] font-DMs font-bold hover:bg-[#F39422] duration-300 ease-in-out'>
                 Shop Now
               </button>
+              </Link>
             </div>
 
             {/* Furniture Offer Section */}
@@ -44,9 +51,11 @@ const Secondpart = () => {
                 <h2 className='text-[30px] md:text-[40px] text-[#262626] font-DMs font-bold'>50%</h2>
                 <h4 className='text-[14px] md:text-[16px] text-[#6D6D6D] font-DMs font-normal'>sale for all items!</h4>
               </div>
+              <Link to= "/shop">
               <button className='md:h-[50px] h-[40px] w-[100px] md:w-[185px] bg-black text-white text-[14px] md:text-[16px] font-DMs font-bold hover:bg-[#F39422] duration-300 ease-in-out'>
                 Shop Now
               </button>
+              </Link>
             </div>
           </div>
         </div>

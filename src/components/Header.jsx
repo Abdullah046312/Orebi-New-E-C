@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Container from './Container';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +19,9 @@ const Header = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:block w-2/3">
-        <ul className="flex gap-6 justify-center font-DMs text-[16px] font-semibold text-[#767676]">
-          <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold">Home</li>
-          <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold">Shop</li>
+        <ul className="flex gap-6 justify-center font-DMs text-[16px] font-semibold text-[#767676] cursor-pointer">
+          <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold"> <Link to="/">Home</Link></li>
+          <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold"><Link to="/shop">Shop</Link></li>
           <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold">About</li>
           <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold">Contacts</li>
           <li className="hover:text-[#262626] duration-300 ease-in-out hover:font-bold">Journal</li>

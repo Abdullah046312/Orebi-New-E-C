@@ -17,7 +17,7 @@ const Arrivalscomponents = ({item}) => {
            
             <Container>
             <div className="flex gap-[20px] items-center">
-            <div className="md:!w-[97%] w-full  border-2 border-[#6EACDA] bg-transparent h-[470px] ">
+            <div className="md:!w-[97%] w-full  border-[2px] border-[#6EACDA]  bg-transparent h-[500px] ">
                 <div className="">
                     <div className="">
                         <div className="relative group overflow-hidden">
@@ -32,7 +32,7 @@ const Arrivalscomponents = ({item}) => {
                         </div>
                       
                      
-                        <div className="pl-2 mt-3">{item.warrantyInformation}</div>
+                        <div className="pl-2 mt-3 font-DMs ">{item.warrantyInformation}</div>
                         
                        
                         </div>
@@ -47,7 +47,7 @@ const Arrivalscomponents = ({item}) => {
                         <h4 className='text-[#767676] font-normal text-[16px] font-DMs'>{item.brand}</h4>
     
                     </div>
-                    <p className='text-[#767676] font-normal text-[16px] font-DMs'>${item.price}</p>
+                    <p className='text-[#767676] font-normal text-[16px] font-DMs pr-2'>${item.price}</p>
                     
                 </div>
             </div>

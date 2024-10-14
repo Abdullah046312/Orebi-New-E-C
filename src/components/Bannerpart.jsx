@@ -8,6 +8,7 @@ import headphone3 from "../assets/headphone3.png"
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -76,9 +77,12 @@ const Bannerpart = () => {
                 <h3 className="text-[26px] md:text-[40px] text-[#262626] font-DMs font-bold ">50%</h3>
                 <h4 className="text-[14px] md:text-[16px] text-[#6D6D6D] font-DMs font-normal">sale for all furniture items!</h4>
               </div>
+              <Link to="/shop">
               <button className=" md:mt-7 mt-3 h-[40px] md:h-[50px] w-[80px] md:w-[185px] bg-black text-white text-[12px] md:text-[16px] font-DMs font-bold hover:bg-[#F39422] duration-300 ease-in-out">
                 Shop Now
               </button>
+              
+              </Link>
             </div>
           </div>
         ))}

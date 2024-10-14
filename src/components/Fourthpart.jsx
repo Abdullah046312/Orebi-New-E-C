@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './Container'
+import { Link } from 'react-router-dom'
 
 const Fourthpart = () => {
   return (
@@ -13,9 +14,11 @@ const Fourthpart = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum..
             </p>
             <div className="mt-3">
+              <Link to="/shop">
                 <button className='h-[50px] w-[150px] sm:w-[185px] bg-[#262626] text-white text-[14px] sm:text-[16px] font-DMs font-bold hover:bg-[#F39422] duration-300 ease-in-out'>
                   Shop Now
                 </button>
+              </Link>
             </div>
         </div>
     </Container>
