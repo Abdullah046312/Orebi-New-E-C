@@ -1,15 +1,46 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Container from './Container';
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPlus, FaMinus, FaHeart,  FaShoppingCart } from "react-icons/fa";
-import { FaCodeCompare } from "react-icons/fa6";
 
-import images3 from "../assets/images3.png";
+
+
 import { Link } from 'react-router-dom';
 import ShopFirstInner from './ShopFirstInner';
+import { ApiData } from './ContextApi';
+import Pagination from './Pagination';
 
 const ShopFirstpart = () => {
+    let {info, Loading} = useContext(ApiData)
     let [show, setShow] = useState(false);
+    let [currentPage, setCurrentPage] = useState(1);
+    let [perPage, setPerPage] = useState(6);
+
+    let lastPage = currentPage * perPage
+    let fistPage = lastPage - perPage
+
+    let allPage = info.slice(fistPage, lastPage)
+
+    let pageNumber = []
+
+    for (let i = 0; i < Math.ceil(info.length / perPage); i++){
+        pageNumber.push(i)
+
+    }
+
+    console.log(pageNumber);
+    
+
+    
+    console.log(allPage);
+    
+    
+  
+    
+
+
+  
+    
     
     return (
         <section>
@@ -38,6 +69,7 @@ const ShopFirstpart = () => {
                             )}
                         </div>
                     </div>
+                    
 
                     <div className="md:w-4/5 mt-[200px]">
                         <div className="flex justify-end items-center gap-[20px] mb-10">
@@ -58,13 +90,19 @@ const ShopFirstpart = () => {
                                 </select>
                             </div>
                         </div>
+                        </div>
+                        </div>
                         
-                        <div className="flex gap-5 flex-wrap">
-                         <ShopFirstInner/>
+                        <div className="flex gap-5 flex-wrap w-full justify-center mt-10">
+                         <ShopFirstInner allPage={allPage} />
+                         <div className="flex justify-center w-full">
+                         <Pagination pageNumber={pageNumber}/>
+
+                         </div>
                             {/* Add more product cards here */}
                         </div>
-                    </div>
-                </div>
+                    
+                
             </Container>
         </section>
     );
